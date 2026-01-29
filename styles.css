@@ -469,96 +469,443 @@ footer .copyright .pro-links i:hover{
     color: #2c2c2c;
 }
 
+/* Tablet and smaller devices */
 @media(max-width: 821px) {
+    /* Navigation */
     nav {
         padding: 15px 20px;
     }
     nav img {
         width: 100px;
-    
     }
 
     #menu-btn{
-    display: initial;
+        display: initial;
+    }
+
+    #menu-close{
+        display: initial;
+        font-size: 1.6rem;
+        color: #fff;
+        padding: 30px 0 20px 20px;
+    }
+
+    nav .navigation ul {
+        position: absolute;
+        top: 0;
+        right: -220px;
+        width: 220px;
+        height: 100vh;
+        background: rgba(17, 20, 104, 0.45);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    nav .navigation ul.active{
+        right: 0;
+    }
+    nav .navigation ul li{
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+
+    nav .navigation ul li a{
+        color: #fff;
+    }
+
+    /* Home Section */
+    #home {
+        padding-top: 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+    }
+    
+    #home h2 {
+        font-size: 1.8rem;
+    }
+    
+    #home p {
+        width: 90%;
+        font-size: 0.85rem;
+    }
+    
+    #home .btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #home a {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* Features Section */
+    #features {
+        padding: 5vw 20px 0 20px;
+    }
+
+    #features h1 {
+        font-size: 2rem;
+    }
+
+    #features .fea-base {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Courses Section */
+    #course {
+        padding: 8vw 20px 8vw 20px;
+    }
+
+    #course h2 {
+        font-size: 2rem;
+    }
+
+    #course .course-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Registration Section */
+    #registration {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    #registration .reminder {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #registration .reminder h1 {
+        font-size: 2rem;
+    }
+
+    #registration .time {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #registration .form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Experts Section */
+    #experts .expert-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    footer .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
-#menu-close{
-    display: initial;
-    font-size: 1.6rem;
-    color: #fff;
-    padding: 30px 0 20px 20px;
+/* Mobile devices - phones */
+@media(max-width: 600px) {
+    /* Global Adjustments */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 12px 15px;
+    }
+
+    nav img {
+        width: 80px;
+    }
+
+    nav .navigation ul {
+        width: 200px;
+        right: -200px;
+    }
+
+    /* Home Section */
+    #home {
+        height: 70vh;
+        padding-top: 60px;
+    }
+
+    #home h2 {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    #home p {
+        width: 95%;
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+
+    #home .btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    #home a {
+        width: 85%;
+        max-width: 250px;
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+
+    /* Features Section */
+    #features {
+        padding: 40px 15px 0 15px;
+    }
+
+    #features h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    #features > p {
+        font-size: 0.85rem;
+    }
+
+    #features .fea-base {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        margin-top: 30px;
+    }
+
+    #features .fea-box {
+        padding: 20px;
+        background: #f9f9ff;
+    }
+
+    #features .fea-box i {
+        font-size: 2rem;
+    }
+
+    #features .fea-box h3 {
+        font-size: 1rem;
+        padding: 10px 0 5px 0;
+    }
+
+    #features .fea-box p {
+        font-size: 0.9rem;
+    }
+
+    /* Courses Section */
+    #course {
+        padding: 40px 15px;
+    }
+
+    #course h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    #course > p {
+        font-size: 0.85rem;
+    }
+
+    #course .course-box {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        margin-top: 30px;
+    }
+
+    #course .courses {
+        height: auto;
+    }
+
+    #course .courses img {
+        height: 200px;
+    }
+
+    #course .courses .details {
+        padding: 12px 12px 0 12px;
+    }
+
+    #course .courses .cost {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 0.9rem;
+        right: 12px;
+        bottom: 80px;
+    }
+
+    /* Registration Section */
+    #registration {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    #registration .reminder h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    #registration .reminder .time {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #registration .reminder .time .date {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+
+    #registration .form {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 15px;
+    }
+
+    #registration .form input {
+        padding: 12px 8px;
+        margin: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    #registration .form a {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+
+    /* Experts Section */
+    #experts {
+        padding: 40px 15px;
+    }
+
+    #experts h1 {
+        font-size: 1.5rem;
+    }
+
+    #experts .expert-box {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        margin-top: 30px;
+    }
+
+    #experts .expert-box .profile {
+        padding: 20px 10px;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pro-links i {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 15px;
+        flex-direction: column;
+    }
+
+    footer .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    footer h3 {
+        font-size: 1rem;
+    }
+
+    footer li {
+        padding: 7px 0;
+        font-size: 0.85rem;
+    }
+
+    footer input {
+        width: 100%;
+        max-width: 200px;
+        padding: 12px 10px;
+        font-size: 0.85rem;
+    }
+
+    footer .suscribe a {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    footer .copyright {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer .copyright p {
+        font-size: 0.85rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .copyright .pro-links {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
 }
 
-nav .navigation ul {
-    position: absolute;
-    top: 0;
-    right: -220px;
-    width: 220px;
-    height: 100vh;
-    background: rgba(17, 20, 104, 0.45);
-    backdrop-filter: blur(4.5px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: right 0.3s ease;
-    z-index: 999;
-}
+/* Extra small devices */
+@media(max-width: 400px) {
+    #home {
+        height: 60vh;
+        padding-top: 50px;
+    }
 
-nav .navigation ul.active{
-    right: 0;
-}
-nav .navigation ul li{
-    padding: 20px 0 20px 40px;
-    margin-left: 0;
-}
+    #home h2 {
+        font-size: 1.2rem;
+    }
 
-nav .navigation ul li a{
-    color: #fff;
-}
-#home {
-    padding-top: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#home p {
-    width: 90%;
-}
+    #home p {
+        font-size: 0.75rem;
+        width: 100%;
+    }
 
-#course .course-box {
-    grid-template-columns: repeat(2, 1fr);
-}
+    #home a {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
 
-#experts .expert-box {
-    grid-template-columns: repeat(2, 1fr);
-}
+    #features .fea-base {
+        margin-top: 20px;
+    }
 
-#features .fea-base {
-    grid-template-columns: repeat(2, 1fr);
-}
+    #course .course-box {
+        margin-top: 20px;
+    }
 
-#registration {
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
-}
+    nav .navigation ul li {
+        padding: 15px 0 15px 30px;
+    }
 
-#registration .reminder {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-#registration .form {
-    width: 100%;
-}
-
-#features {
-    padding: 5vw 20px 0 20px;
-}
-
-#course {
-    padding: 8vw 20px 8vw 20px;
-}
-
+    #registration .form {
+        padding: 20px 10px;
+    }
 }
